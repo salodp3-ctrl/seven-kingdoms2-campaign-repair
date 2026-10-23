@@ -1,0 +1,63 @@
+ROOT CAUSE AND PATCH DESIGN
+
+Campaign::random_unused_race(bool isMonster) allocates MAX_MONSTER_TYPE (7)
+bytes for monster selection, but the candidate loops and random fallback use
+MAX_RACE (12). The first seven entries are valid; reading entries 8-12 is outside
+the allocation. A generated invalid negative species can persist in a campaign.
+The campaign animation later uses -race_id as a monster resource index, reads an
+invalid unit ID, then an invalid sprite ID or pointer. The resulting SPRITE error
+filename may contain unrelated bytes. Not every campaign crash has this cause.
+
+Reference source:
+https://github.com/7k2/7k2/blob/master/src/ocampgn.cpp
+Function: Campaign::random_unused_race
+This is reference source, not the exact source of the supported HD executables.
+The relevant machine-code structure was checked in both supported builds.
+
+OBSERVED FAILURE
+A captured campaign had nation race IDs 1, 3, -3, -7, -12, -2, -5.
+The defender had race -12 despite the loaded monster table containing 7 records.
+The invalid index produced an invalid unit/sprite reference during animation.
+The captured game data confirms Minotauros (monster 4) uses unit 66 and sprite
+129, GIANTET.SPR. Its sprite file existed in the tested installations.
+
+IMPLEMENTATION
+An executable PE section named .campfix contains a relocated copy of the original
+race selection routine. Only its two candidate-loop limits and random fallback
+limit change from 12 to 7. A dispatcher uses the corrected copy only for monster
+selection. Human selection continues through the original routine.
+A hook in Campaign::get_nation changes race IDs below -7 to -4 (Minotauros).
+Valid human and monster species remain unchanged. The hook preserves flags.
+Existing invalid kingdoms therefore change species; this is an explicit repair
+policy, not recovery of an unknowable originally intended species.
+No campaign battle-animation or decision routine is bypassed by this patch.
+Saves are not rewritten by the installer. Runtime correction persists on saving.
+
+ADDRESSES (preferred image base 0x400000)
+GOG: generator 0x44DB00, getter hook 0x44D422, continuation 0x44D43E.
+Steam: generator 0x44DA60, getter hook 0x44D382, continuation 0x44D39E.
+Original image section alignment and relative calls are preserved.
+Exact original and patched SHA256 hashes are recorded in patches.json.
+
+VALIDATION
+230 machine-code test cases per edition at bases 0x400000 and 0x3A0000.
+Checks include original out-of-bounds reproduction, corrected bounds, human
+races 1-12, monster species 1-7, invalid saved-species replacement, and stack
+cleanup. The original generator fails the bounds test as expected.
+Installer tested using Windows PowerShell: apply, repeated apply, restore,
+repeated restore, simulated reinstall/reapply, unknown-version refusal, and
+corrupt-backup refusal. Replacement output is checked by SHA256 before and after
+installation. The installer does not patch unrecognized executable builds.
+
+REPRODUCTION AND REPORTING
+For an affected save, load the pre-victory mission and advance to the campaign
+map. Compare the same transition before and after repair. Report game edition,
+original executable SHA256, Windows version, exact error, and whether the failure
+occurs before or after the campaign map. Do not publicly post memory dumps,
+personal data, or complete game executables. Share saves only intentionally.
+
+LIMITATIONS
+Unofficial targeted binary repair. No claim to fix every crash, to support other
+builds or mods, or to establish complete-campaign or multiplayer compatibility.
+Steam updates or Verify integrity may remove the patch. Restore then reapply only
+if the executable still matches a supported original build.

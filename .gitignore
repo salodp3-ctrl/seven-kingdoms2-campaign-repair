@@ -1,0 +1,7 @@
+build/
+__pycache__/
+*.exe
+*.dmp
+*.DMP
+*.SAV
+CampaignRepairBackups/

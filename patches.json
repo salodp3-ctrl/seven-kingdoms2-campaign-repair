@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "patchVersion": "1.0",
+  "versions": [
+    {
+      "name": "Steam build 8890160",
+      "originalHash": "b866df4b47e6d82105dd52a4dbfd5106ad51df104d629bdf09b4425b06a51c06",
+      "patchedHash": "3d19e9a3b06d71286412bbd978568c83a71ce2273098aa06ac67b05241b60d90",
+      "originalLength": 2770432,
+      "patchedLength": 2770944,
+      "changes": [
+        {
+          "offset": 318,
+          "before": "BQ==",
+          "after": "Bg=="
+        },
+        {
+          "offset": 341,
+          "before": "iA==",
+          "after": "ig=="
+        },
+        {
+          "offset": 393,
+          "before": "cA==",
+          "after": "gA=="
+        },
+        {
+          "offset": 760,
+          "before": "AAAAAAAAAAAAAA==",
+          "after": "LmNhbXBmaXjEAQ=="
+        },
+        {
+          "offset": 773,
+          "before": "AAA=",
+          "after": "cJA="
+        },
+        {
+          "offset": 777,
+          "before": "AA==",
+          "after": "Ag=="
+        },
+        {
+          "offset": 781,
+          "before": "AAA=",
+          "after": "Rio="
+        },
+        {
+          "offset": 796,
+          "before": "AA==",
+          "after": "IA=="
+        },
+        {
+          "offset": 799,
+          "before": "AA==",
+          "after": "YA=="
+        },
+        {
+          "offset": 313218,
+          "before": "jUQKGusW",
+          "after": "6SieiwCQ"
+        },
+        {
+          "offset": 314976,
+          "before": "VYvsg+wY",
+          "after": "6TSXiwCQ"
+        },
+        {
+          "offset": 2770432,
+          "before": "",
+          "after": "VYvsg+wYiU3oD7ZFCIXAdB9qB+g41JH/g8QEiUX0agdqAItN9FHoNcuR/4PEDOsdagzoGdSR/4PEBIlF9GoMagCLVfRS6BbLkf+DxAzGRf8Ai03o6BfFc/+JRezrCYtF7IPoAYlF7IN97AB+bYtN7FGLTejop2J0/4XAdALr34tV7FKLTejo1WJ0/w++QDmJRfAPtk0Ihcl0I4N98AB9G4tV8Pfai0X0ikwQ/4DBAYtV8Pfai0X0iEwQ/+sbg33wAH4Vi030A03wilH/gMIBi0X0A0XwiFD/64THRfgBAAAA6wmLTfiDwQGJTfiDffgHfxmLVfQDVfgPvkL/hcB1CYpN/4DBAYhN/+vYD75V/4XSfk0PvkX/UItN6OiwYXT/iEX/x0X4AQAAAOsJi034g8EBiU34g334B38ji1X0A1X4D75C/4XAdRMPvk3/hcl1AusLilX/gOoBiFX/687rE2oHi03o6GZhdP8PvsCDwAGJRfiLTfRR6LTSkf+DxAQPtlUIhdJ0CYtF+PfY6wXrA4tF+IvlXcIEAIB8JAQAD4Vc/v//VYvsg+wY6bdodP+NRAoanIB4Ofl9BMZAOfyd6dphdP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+        }
+      ]
+    },
+    {
+      "name": "GOG 2.10E HD",
+      "originalHash": "fc9e5a4b0d284b6148b19f867ff42e7e5d6f18840202e98d925cd89fe046cffa",
+      "patchedHash": "df39a1a8f3caf7aa25db6cf528309f9287f32bb9230f9543006273f6e7583280",
+      "originalLength": 2769408,
+      "patchedLength": 2769920,
+      "changes": [
+        {
+          "offset": 310,
+          "before": "BQ==",
+          "after": "Bg=="
+        },
+        {
+          "offset": 333,
+          "before": "hg==",
+          "after": "iA=="
+        },
+        {
+          "offset": 385,
+          "before": "cA==",
+          "after": "gA=="
+        },
+        {
+          "offset": 752,
+          "before": "AAAAAAAAAAAAAA==",
+          "after": "LmNhbXBmaXjEAQ=="
+        },
+        {
+          "offset": 765,
+          "before": "AAA=",
+          "after": "cJA="
+        },
+        {
+          "offset": 769,
+          "before": "AA==",
+          "after": "Ag=="
+        },
+        {
+          "offset": 773,
+          "before": "AAA=",
+          "after": "Qio="
+        },
+        {
+          "offset": 788,
+          "before": "AA==",
+          "after": "IA=="
+        },
+        {
+          "offset": 791,
+          "before": "AA==",
+          "after": "YA=="
+        },
+        {
+          "offset": 313378,
+          "before": "jUQKGusW",
+          "after": "6YidiwCQ"
+        },
+        {
+          "offset": 315136,
+          "before": "VYvsg+wY",
+          "after": "6ZSWiwCQ"
+        },
+        {
+          "offset": 2769408,
+          "before": "",
+          "after": "VYvsg+wYiU3oD7ZFCIXAdB9qB+iI0ZH/g8QEiUX0agdqAItN9FHohciR/4PEDOsdagzoadGR/4PEBIlF9GoMagCLVfRS6GbIkf+DxAzGRf8Ai03o6KfFc/+JRezrCYtF7IPoAYlF7IN97AB+bYtN7FGLTejoR2N0/4XAdALr34tV7FKLTejodWN0/w++QDmJRfAPtk0Ihcl0I4N98AB9G4tV8Pfai0X0ikwQ/4DBAYtV8Pfai0X0iEwQ/+sbg33wAH4Vi030A03wilH/gMIBi0X0A0XwiFD/64THRfgBAAAA6wmLTfiDwQGJTfiDffgHfxmLVfQDVfgPvkL/hcB1CYpN/4DBAYhN/+vYD75V/4XSfk0PvkX/UItN6OhQYnT/iEX/x0X4AQAAAOsJi034g8EBiU34g334B38ji1X0A1X4D75C/4XAdRMPvk3/hcl1AusLilX/gOoBiFX/687rE2oHi03o6AZidP8PvsCDwAGJRfiLTfRR6ATQkf+DxAQPtlUIhdJ0CYtF+PfY6wXrA4tF+IvlXcIEAIB8JAQAD4Vc/v//VYvsg+wY6VdpdP+NRAoanIB4Ofl9BMZAOfyd6XpidP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+        }
+      ]
+    }
+  ]
+}

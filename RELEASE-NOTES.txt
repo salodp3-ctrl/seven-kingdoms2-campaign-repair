@@ -1,0 +1,15 @@
+v1.0.0 - Unofficial campaign SPRITE crash repair
+
+Fixes out-of-range monster species selection (12 candidates for 7 species) and
+repairs invalid species in existing campaigns by assigning Minotauros.
+Preserves campaign animations and the original campaign decision code.
+Supports exact verified Steam build 8890160 and GOG 2.10E HD executables only.
+Includes executable backup, status check, restore, and reinstall/reapply support.
+Unknown versions are refused. See README.txt for installation and limitations.
+
+Testing: 230 emulated machine-code cases per supported executable; installer
+round-trip/reinstall/refusal checks; successful transition on one affected
+campaign. Broader player testing is welcome.
+
+The archive includes the readable PowerShell installer and patch data. It does
+not include the complete game, personal saves, or memory dumps.
